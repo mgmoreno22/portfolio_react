@@ -10,8 +10,8 @@ export default function About() {
         University of San Francisco with additional study of Java programming
         and web design at East Los Angeles College. I have recently completed a
         certificate in full-stack web development from the UCLA Extension Coding
-        Bootcamp with newly developed skills in CSS, JavaScript, React, and
-        Responsive Web Design.
+        Bootcamp with newly developed skills in CSS, JavaScript, React,
+        SQL/NoSQL Databases, and Responsive Web Design.
       </p>
       <p>
         I am adaptable, self-motivated, and have an eye for detail which I use
