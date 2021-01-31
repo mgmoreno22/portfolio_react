@@ -16,6 +16,8 @@ export default function Contact() {
         }
       );
     e.target.reset();
+    //Alert is temporary - confirmation that function has run successfully
+    alert("Your email has been sent")
   }
 
   return (
