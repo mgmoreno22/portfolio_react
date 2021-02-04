@@ -1,7 +1,11 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
+import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
-import TelegramIcon from '@material-ui/icons/Telegram'
+import TelegramIcon from '@material-ui/icons/Telegram';
+import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 
 export default function Contact() {
   function sendEmail(e) {
@@ -28,18 +32,18 @@ export default function Contact() {
   }
 
   return (
-    <form className="contact-form" onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" required />
-      <label>Email</label>
-      <input type="email" name="user_email" required />
-      <label>Subject</label>
-      <input type="text" name="subject" />
-      <label>Message</label>
-      <textarea name="message" required />
+    <FormControl className="contact-form" onSubmit={sendEmail}>
+      <InputLabel htmlFor="user_name" >Name</InputLabel >
+      <Input type="text" id="user_name" name="user_name" required />
+      <InputLabel htmlFor="user_email">Email</InputLabel >
+      <Input type="email" name="user_email" id="user_email" required />
+      <InputLabel htmlFor="subject">Subject</InputLabel >
+      <Input type="text" id="subject" name="subject" />
+      <InputLabel htmlFor="message">Message</InputLabel >
+      <TextareaAutosize name="message" required />
       <Button startIcon={<TelegramIcon />} type="submit" value="Send" variant="contained" color="primary">
         Send
       </Button>
-    </form>
+    </FormControl>
   );
 }
